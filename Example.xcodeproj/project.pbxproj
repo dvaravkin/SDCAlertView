@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E23464B23C09DE500D323D8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E23464A23C09DE500D323D8 /* Media.xcassets */; };
 		D2515E731BC1A47F00ED606F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2515E721BC1A47F00ED606F /* AppDelegate.swift */; };
 		D2515E751BC1A47F00ED606F /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2515E741BC1A47F00ED606F /* DemoViewController.swift */; };
 		D2515E781BC1A47F00ED606F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2515E761BC1A47F00ED606F /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E23464A23C09DE500D323D8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D2515E6F1BC1A47F00ED606F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2515E721BC1A47F00ED606F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2515E741BC1A47F00ED606F /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D2515E761BC1A47F00ED606F /* Main.storyboard */,
 				D2515E7B1BC1A47F00ED606F /* LaunchScreen.storyboard */,
 				D2515E7E1BC1A47F00ED606F /* Info.plist */,
+				3E23464A23C09DE500D323D8 /* Media.xcassets */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -233,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2515E7D1BC1A47F00ED606F /* LaunchScreen.storyboard in Resources */,
+				3E23464B23C09DE500D323D8 /* Media.xcassets in Resources */,
 				D2515E781BC1A47F00ED606F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +384,6 @@
 		D2515E821BC1A47F00ED606F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -398,7 +402,6 @@
 		D2515E831BC1A47F00ED606F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;

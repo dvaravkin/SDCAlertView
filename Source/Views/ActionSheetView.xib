@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,6 +16,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiE-E8-Ngj">
                     <rect key="frame" x="0.0" y="0.0" width="323" height="173"/>
                     <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7T-af-pIG">
+                            <rect key="frame" x="0.0" y="0.0" width="323" height="173"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nvf-GZ-KLA">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="173"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <blurEffect style="extraLight"/>
+                        </visualEffectView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rRJ-lI-jfT">
                             <rect key="frame" x="0.0" y="0.0" width="323" height="173"/>
                             <subviews>
@@ -38,7 +43,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="P7t-ji-MaB" secondAttribute="trailing" id="24O-Do-gkV"/>
                                         <constraint firstItem="vfZ-Nd-gE5" firstAttribute="firstBaseline" secondItem="P7t-ji-MaB" secondAttribute="baseline" constant="28" id="60T-Bt-Lq7"/>
@@ -52,7 +57,7 @@
                                 </view>
                                 <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olF-R0-P3x">
                                     <rect key="frame" x="136.5" y="83" width="50" height="59"/>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="59" placeholder="YES" id="cPG-xf-5PK"/>
                                     </constraints>
@@ -70,6 +75,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="j3f-QM-C8G" firstAttribute="leading" secondItem="rRJ-lI-jfT" secondAttribute="leading" id="WKi-pB-CIN"/>
                                 <constraint firstAttribute="trailing" secondItem="j3f-QM-C8G" secondAttribute="trailing" id="zPG-2I-Wl7"/>
@@ -77,11 +83,15 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="rRJ-lI-jfT" secondAttribute="bottom" id="3Hw-Wh-2qG"/>
+                        <constraint firstItem="X7T-af-pIG" firstAttribute="top" secondItem="ZiE-E8-Ngj" secondAttribute="top" id="9Dr-wx-RS5"/>
+                        <constraint firstItem="X7T-af-pIG" firstAttribute="leading" secondItem="ZiE-E8-Ngj" secondAttribute="leading" id="LxF-K9-zpJ"/>
                         <constraint firstAttribute="trailing" secondItem="rRJ-lI-jfT" secondAttribute="trailing" id="MUr-6u-BxY"/>
+                        <constraint firstAttribute="trailing" secondItem="X7T-af-pIG" secondAttribute="trailing" id="VaM-3f-yav"/>
                         <constraint firstItem="rRJ-lI-jfT" firstAttribute="leading" secondItem="ZiE-E8-Ngj" secondAttribute="leading" id="eGJ-Ld-7JO"/>
+                        <constraint firstAttribute="bottom" secondItem="X7T-af-pIG" secondAttribute="bottom" id="hYV-Gx-CFM"/>
                         <constraint firstItem="rRJ-lI-jfT" firstAttribute="top" secondItem="ZiE-E8-Ngj" secondAttribute="top" id="teT-Xa-Qdz"/>
                     </constraints>
                 </view>
@@ -99,7 +109,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUT-3J-nYJ">
-                            <rect key="frame" x="135" y="18" width="53" height="20.5"/>
+                            <rect key="frame" x="135" y="18.5" width="53" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -116,7 +126,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Q3g-KU-XeF" firstAttribute="top" secondItem="ZiE-E8-Ngj" secondAttribute="bottom" constant="8" id="0OS-C4-lO9"/>
                 <constraint firstAttribute="trailing" secondItem="ZiE-E8-Ngj" secondAttribute="trailing" id="9cX-BG-K0m"/>

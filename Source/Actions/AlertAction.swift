@@ -8,10 +8,11 @@ public class AlertAction: NSObject {
     /// parameter style:   The action's style
     /// parameter handler: An optional closure that's called when the user taps on this action
     @objc
-    public convenience init(title: String?, style: AlertAction.Style, handler: ((AlertAction) -> Void)? = nil)
+    public convenience init(title: String?, rightImage: UIImage?, style: AlertAction.Style, handler: ((AlertAction) -> Void)? = nil)
     {
         self.init()
         self.title = title
+        self.rightImage = rightImage
         self.style = style
         self.handler = handler
     }
@@ -22,11 +23,12 @@ public class AlertAction: NSObject {
     /// - parameter attributedTitle: An optional stylized title
     /// - parameter style:           The action's style
     /// - parameter handler:         An optional closure that is called when the user taps on this action
-    public convenience init(attributedTitle: NSAttributedString?, style: AlertAction.Style,
+    public convenience init(attributedTitle: NSAttributedString?, rightImage: UIImage?, style: AlertAction.Style,
         handler: ((AlertAction) -> Void)? = nil)
     {
         self.init()
         self.attributedTitle = attributedTitle
+        self.rightImage = rightImage
         self.style = style
         self.handler = handler
     }
@@ -46,6 +48,14 @@ public class AlertAction: NSObject {
     @objc
     private(set) public var attributedTitle: NSAttributedString?
 
+    /// The action's left image.
+    @objc
+    internal(set) public var leftImage: UIImage?
+    
+    /// The action's right image.
+    @objc
+    internal(set) public var rightImage: UIImage?
+    
     /// The action's style.
     @objc
     internal(set) public var style: AlertAction.Style = .normal

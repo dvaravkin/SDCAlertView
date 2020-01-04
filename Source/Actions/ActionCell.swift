@@ -3,7 +3,9 @@ import UIKit
 final class ActionCell: UICollectionViewCell {
 
     @IBOutlet private(set) var titleLabel: UILabel!
+    @IBOutlet private(set) var rightImageView: UIImageView!
     @IBOutlet private var highlightedBackgroundView: UIView!
+    @IBOutlet private var titleTrailing: NSLayoutConstraint!
 
     private var textColor: UIColor?
     
@@ -25,6 +27,12 @@ final class ActionCell: UICollectionViewCell {
         
         self.titleLabel.attributedText = action.attributedTitle
 
+        if let rightImage = action.rightImage {
+            rightImageView.image = rightImage
+            titleTrailing.constant = titleTrailing.constant * 2 + rightImageView.frame.size.width
+            titleLabel.textAlignment = .left
+        }
+        
         self.highlightedBackgroundView.backgroundColor = visualStyle.actionHighlightColor
 
         self.setupAccessibility(using: action)

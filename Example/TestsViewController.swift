@@ -11,37 +11,37 @@ class TestsViewController: UITableViewController {
 
             case 1, 3:
                 let alert = AlertController(title: "Title", message: "Message")
-                alert.addAction(AlertAction(title: "OK", style: .normal))
-                alert.addAction(AlertAction(title: "Cancel", style: .preferred))
+                alert.addAction(AlertAction(title: "OK", rightImage: nil, style: .normal))
+                alert.addAction(AlertAction(title: "Cancel", rightImage: nil, style: .preferred))
                 alert.present()
 
             case 2:
                 let alert = AlertController(title: "Title", message: "Message")
-                alert.addAction(AlertAction(title: "OK", style: .normal))
-                alert.addAction(AlertAction(title: "Cancel", style: .preferred))
+                alert.addAction(AlertAction(title: "OK", rightImage: nil,  style: .normal))
+                alert.addAction(AlertAction(title: "Cancel", rightImage: nil,  style: .preferred))
                 alert.shouldDismissHandler = { $0?.title == "Cancel" }
                 alert.present()
 
             case 4:
                 let alert = AlertController(title: "Title", message: "Message")
-                alert.addAction(AlertAction(title: "OK", style: .normal))
-                alert.addAction(AlertAction(title: "Cancel", style: .preferred))
-                alert.addAction(AlertAction(title: "Button", style: .normal))
+                alert.addAction(AlertAction(title: "OK", rightImage: nil,  style: .normal))
+                alert.addAction(AlertAction(title: "Cancel", rightImage: nil,  style: .preferred))
+                alert.addAction(AlertAction(title: "Button", rightImage: nil,  style: .normal))
                 alert.present()
 
             case 5:
                 let alert = AlertController(title: "Title", message: "Message")
                 alert.actionLayout = .vertical
-                alert.addAction(AlertAction(title: "OK", style: .normal))
-                alert.addAction(AlertAction(title: "Cancel", style: .preferred))
+                alert.addAction(AlertAction(title: "OK", rightImage: nil,  style: .normal))
+                alert.addAction(AlertAction(title: "Cancel", rightImage: nil,  style: .preferred))
                 alert.present()
 
             case 6:
                 let alert = AlertController(title: "Title", message: "Message")
                 alert.actionLayout = .horizontal
-                alert.addAction(AlertAction(title: "OK", style: .normal))
-                alert.addAction(AlertAction(title: "Cancel", style: .preferred))
-                alert.addAction(AlertAction(title: "Button", style: .normal))
+                alert.addAction(AlertAction(title: "OK",rightImage: nil, style: .normal))
+                alert.addAction(AlertAction(title: "Cancel",rightImage: nil, style: .preferred))
+                alert.addAction(AlertAction(title: "Button",rightImage: nil, style: .normal))
                 alert.present()
 
             case 7:
@@ -49,7 +49,7 @@ class TestsViewController: UITableViewController {
                 alert.addTextField { textField in
                     textField.text = "Sample text"
                 }
-                alert.addAction(AlertAction(title: "OK", style: .preferred))
+                alert.addAction(AlertAction(title: "OK",rightImage: nil, style: .preferred))
                 alert.present()
 
             case 8:
@@ -66,14 +66,14 @@ class TestsViewController: UITableViewController {
 
             case 9:
                 let alert = AlertController(title: "Title", message: "Message")
-                let action = AlertAction(title: "OK", style: .normal)
+                let action = AlertAction(title: "OK",rightImage: nil, style: .normal)
                 action.accessibilityIdentifier = "button"
                 alert.addAction(action)
                 alert.present()
 
             case 10:
                 let alert = AlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
-                let action = AlertAction(title: "OK", style: .normal)
+                let action = AlertAction(title: "OK",rightImage: nil, style: .normal)
                 action.accessibilityIdentifier = "button"
                 alert.addAction(action)
                 alert.present()
@@ -88,7 +88,7 @@ class TestsViewController: UITableViewController {
                 spinner.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
                 spinner.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
                 spinner.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-                let action = AlertAction(title: "Cancel", style: .normal)
+                let action = AlertAction(title: "Cancel",rightImage: nil, style: .normal)
                 action.accessibilityIdentifier = "cancel"
                 alert.addAction(action)
                 alert.present()
